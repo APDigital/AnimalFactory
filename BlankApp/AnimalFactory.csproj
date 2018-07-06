@@ -192,8 +192,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Factory\Animal.cs" />
     <Compile Include="Factory\AnimalFactory.cs" />
+    <Compile Include="Factory\Bear.cs" />
     <Compile Include="Factory\IAnimal.cs" />
+    <Compile Include="Factory\Insect.cs" />
+    <Compile Include="Factory\RetrieveAnimals.cs" />
+    <Compile Include="Factory\Tiger.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

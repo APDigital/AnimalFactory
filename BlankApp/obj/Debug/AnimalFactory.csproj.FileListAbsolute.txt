@@ -1,0 +1,3 @@
+C:\Users\APearson\source\repos\AnimalFactory\BlankApp\obj\Debug\AnimalFactory.csprojResolveAssemblyReference.cache
+C:\Users\APearson\source\repos\AnimalFactory\BlankApp\obj\Debug\BlankApp.dll
+C:\Users\APearson\source\repos\AnimalFactory\BlankApp\obj\Debug\BlankApp.pdb

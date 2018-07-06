@@ -60,10 +60,13 @@ namespace BlankApp.Models
         public string Password { get; set; }
 
         [Required]
-        [Display(Name = "Animal")]
+        [Display(Name = "Animal Breed")]
         public string Animal { get; set; }
         public IEnumerable<SelectListItem> AnimalList { get; set; }
-
+        [Required]
+        [Display(Name = "Animal Name")]
+        public string AnimalName { get; set; }
+        public IEnumerable<SelectListItem>AvailableAnimals { get; set; }
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }

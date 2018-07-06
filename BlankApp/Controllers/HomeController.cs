@@ -19,32 +19,13 @@ namespace BlankApp.Controllers
                 new SelectListItem{Value = "2", Text ="Brown Bear"},
                 new SelectListItem{Value = "3", Text ="Bee"}
             };
+            model.AvailableAnimals = RetrieveAnimals(); 
             return View(model);
         }
+
         public ActionResult Index(LoginViewModel model)
         {
-            string animalSelected = string.Empty;
-            string name = string.Empty;
-            IAnimal food;
-            if (model.Animal == "1")
-            {
-                name = "Tigger";
-                food = AnimalFactory.GetAnimalFavourtieFood(AnimalBreed.BigCat, name);
-                animalSelected = "Tiger";
-            }
-            else if (model.Animal == "2")
-            {
-                name = "Winnie";
-                food = AnimalFactory.GetAnimalFavourtieFood(AnimalBreed.Bear, name);
-                animalSelected = "Brown Bear";
-            }
-            else
-            {
-                name = "Queenie";
-                food = AnimalFactory.GetAnimalFavourtieFood(AnimalBreed.Insect, name);
-                animalSelected = "Insect";
-            }
-            string.Format("The Animal {0} was selected, it's name is {1}, and it's favourite food is {2}", animalSelected, name, food.ToString());
+            Animal animal = AnimalListItem(model);
             return View();
         }
 
@@ -60,6 +41,10 @@ namespace BlankApp.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        private Animal AnimalListItem(LoginViewModel model)
+        {
+            return AnimalFactory.GetAnimalsFavouriteFood(model.Animal, model.AnimalName);
         }
     }
 }
